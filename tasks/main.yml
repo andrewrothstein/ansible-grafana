@@ -1,0 +1,50 @@
+---
+- name: check for installation of grafana
+  become: yes
+  stat:
+    path: '{{ grafana_install_dir }}'
+  changed_when: false
+  register: grafana_binary
+
+- when: not grafana_binary.stat.exists
+  block:
+    - name: download...
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{grafana_tgz_url}}'
+        dest: /tmp/{{grafana_tgz}}
+        checksum: '{{grafana_checksum}}'
+    - name: unarchive...
+      become: yes
+      become_user: root
+      unarchive:
+        src: /tmp/{{grafana_tgz}}
+        dest: '{{grafana_parent_install_dir}}'
+        creates: '{{grafana_install_dir}}'
+  always:
+    - name: delete installer...
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{grafana_tgz}}
+        state: absent
+
+- name: link...
+  become: yes
+  become_user: root
+  file:
+    src: '{{grafana_install_dir}}'
+    dest: '{{grafana_link_dir}}'
+    state: link
+
+- name: add to login shell path...
+  become: yes
+  become_user: root
+  with_items:
+    - f: grafana.sh
+      d: /etc/profile.d
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{item.d}}/{{item.f}}'
+    mode: '{{item.m|default("0644")}}'
