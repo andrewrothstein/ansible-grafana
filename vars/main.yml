@@ -1,8 +1,9 @@
 ---
 # vars file for grafana
-grafana_name: grafana-{{grafana_ver}}
-grafana_tgz: '{{grafana_name}}.{{grafana_platform}}.tar.gz'
-grafana_tgz_url: '{{grafana_mirror}}/{{grafana_tgz}}'
+grafana_name: grafana-{{ grafana_ver }}
+grafana_tgz: '{{ grafana_name }}.{{ grafana_platform }}.tar.gz'
+grafana_tgz_url: '{{ grafana_mirror }}/{{ grafana_tgz }}'
+grafana_checksum: '{{ grafana_checksums[grafana_ver] }}'
 
-grafana_install_dir: '{{grafana_parent_install_dir}}/{{grafana_name}}'
-grafana_link_dir: '{{grafana_parent_install_dir}}/grafana'
+grafana_install_dir: '{{ grafana_parent_install_dir }}/{{ grafana_name }}'
+grafana_link_dir: '{{ grafana_parent_install_dir }}/grafana'

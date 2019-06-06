@@ -1,7 +1,8 @@
 ---
 # defaults file for grafana
-grafana_ver: '4.6.1'
-grafana_platform: linux-x64
-grafana_mirror: https://s3-us-west-2.amazonaws.com/grafana-releases/release
+grafana_ver: '6.2.2'
+grafana_platform: linux-amd64
+grafana_mirror: https://dl.grafana.com/oss/release
 grafana_parent_install_dir: /usr/local
-grafana_checksum: sha256:587cb56c76fa8496caf93d4f31ca0b9850a3608f9aa94f439adea1357c36e510
+grafana_checksums:
+  '6.2.2': sha256:bf2a1ffab417e54a1c31e421077b9c5278e423d5fa9b7b98d418c4f85602838b
