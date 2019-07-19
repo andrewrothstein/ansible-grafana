@@ -3,3 +3,5 @@
 .ansible-roles/
 Dockerfile.*
 requirements.yml
+*.tar.gz
+*.zip
