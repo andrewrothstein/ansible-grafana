@@ -1,5 +1,6 @@
 ---
 # vars file for grafana
+grafana_platform: '{{ grafana_os }}-{{ grafana_arch }}'
 grafana_name: grafana-{{ grafana_ver }}
 grafana_tgz: '{{ grafana_name }}.{{ grafana_platform }}.tar.gz'
 grafana_tgz_url: '{{ grafana_mirror }}/{{ grafana_tgz }}'
