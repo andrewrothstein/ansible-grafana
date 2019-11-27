@@ -1,6 +1,6 @@
 ---
 # defaults file for grafana
-grafana_ver: '6.4.4'
+grafana_ver: '6.5.0'
 grafana_os: linux
 grafana_arch: amd64
 grafana_mirror: https://dl.grafana.com/oss/release
@@ -12,3 +12,5 @@ grafana_checksums:
   '6.2.5': sha256:48bb6e93c1d063d4d2f960be0dba8f40acc88aa534c3ac653cb9d5f9424feca7
   # https://dl.grafana.com/oss/release/grafana-6.4.4.linux-amd64.tar.gz
   '6.4.4': sha256:13f453783837d188ea2fd00a8b31909c26fdac45728e868e795279121b1ba894
+  # https://dl.grafana.com/oss/release/grafana-6.5.0.linux-amd64.tar.gz
+  '6.5.0': sha256:0fbd03aa27acaf7b8dee37d0230962aa11990e74b06e5f59aa417a46a07f1fcb
