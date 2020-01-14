@@ -4,25 +4,30 @@ DIR=~/Downloads
 MIRROR=https://dl.grafana.com/oss/release
 
 dl() {
-    ver=$1
-    os=$2
-    arch=$3
-    local file=grafana-$ver.$os-$arch.tar.gz
+    local ver=$1
+    local os=$2
+    local arch=$3
+    local archive_type=${4:-tar.gz}
+    local platform="${os}-${arch}"
+    local file="grafana-${ver}.${platform}.${archive_type}"
     local lfile=$DIR/$file
     local url=$MIRROR/$file
-    printf "  # %s\n" $url
 
     if [ ! -e $lfile ];
     then
         wget -q -O $lfile $url
     fi
 
-    printf "  '%s': sha256:%s\n" $ver $(sha256sum $lfile | awk '{print $1}')
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $platform $(sha256sum $lfile | awk '{print $1}')
 }
 
 dl_ver() {
     local ver=$1
+    printf "  '%s':\n" $ver
     dl $ver linux amd64
+    dl $ver linux arm64
+    dl $ver windows amd64 zip
 }
 
-dl_ver ${1:-6.5.1}
+dl_ver ${1:-6.5.2}
