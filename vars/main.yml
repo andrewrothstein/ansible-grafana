@@ -3,6 +3,7 @@
 grafana_platform: '{{ grafana_os }}-{{ grafana_arch }}'
 grafana_name: grafana-{{ grafana_ver }}
 grafana_tgz: '{{ grafana_name }}.{{ grafana_platform }}.{{ grafana_archive_type | default("tar.gz") }}'
+grafana_tmp_tgz: /tmp/{{ grafana_tgz }}
 grafana_tgz_url: '{{ grafana_mirror }}/{{ grafana_tgz }}'
 grafana_checksum: '{{ grafana_checksums[grafana_ver][grafana_platform] }}'
 

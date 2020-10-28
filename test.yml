@@ -1,4 +1,9 @@
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
+    - role: '{{ playbook_dir }}'
+  tasks:
+    - command: /usr/local/grafana/bin/grafana-server -v
+      register: grafana_test_output
+    - debug:
+        msg: '{{ grafana_test_output.stdout }}'
