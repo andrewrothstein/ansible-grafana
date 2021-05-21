@@ -1,6 +1,6 @@
 ---
 # defaults file for grafana
-grafana_ver: 7.5.1
+grafana_ver: 7.5.7
 grafana_os: linux
 grafana_arch: amd64
 grafana_mirror: https://dl.grafana.com/oss/release
@@ -294,3 +294,45 @@ grafana_checksums:
     linux-arm64: sha256:4367db18af36d2730552de7925908f35b6572ef48237d530572f5d78dfceae4e
     # https://dl.grafana.com/oss/release/grafana-7.5.1.windows-amd64.zip
     windows-amd64: sha256:0c582f7148ea9062017beffdf767e6e138556342a51672b328c07c8b55e5faca
+  '7.5.2':
+    # https://dl.grafana.com/oss/release/grafana-7.5.2.linux-amd64.tar.gz
+    linux-amd64: sha256:c95b3030d38b5ff005b6fe394d79bc59c1c4cadc9882d8ef8bb5747517b00dd7
+    # https://dl.grafana.com/oss/release/grafana-7.5.2.linux-arm64.tar.gz
+    linux-arm64: sha256:d73297ca3996346daeeacb279568744efff41c9a1d3fc86259f6d10dba809078
+    # https://dl.grafana.com/oss/release/grafana-7.5.2.windows-amd64.zip
+    windows-amd64: sha256:af019a60ffd25a667b7a1b4202e72990692cacb5100b738c39d3f27cf1fadd37
+  '7.5.3':
+    # https://dl.grafana.com/oss/release/grafana-7.5.3.linux-amd64.tar.gz
+    linux-amd64: sha256:2795a3ef4c504f334e4920f5a5ceb1f2ee067a0f819ea6a93b81223e7cb287fe
+    # https://dl.grafana.com/oss/release/grafana-7.5.3.linux-arm64.tar.gz
+    linux-arm64: sha256:4871ca0981ab390df47feb35c94765309cc0751c7e92d4b2e9ddcec6c61e7f70
+    # https://dl.grafana.com/oss/release/grafana-7.5.3.windows-amd64.zip
+    windows-amd64: sha256:258e12db2821d7f482d473b077f1bab1ad51c6d4fc806cb4c16dccd6b6138469
+  '7.5.4':
+    # https://dl.grafana.com/oss/release/grafana-7.5.4.linux-amd64.tar.gz
+    linux-amd64: sha256:b37757e4b2a9b82098a9ad5a36ccb2a37c4d8f5c4264c622823a20ba6547acf9
+    # https://dl.grafana.com/oss/release/grafana-7.5.4.linux-arm64.tar.gz
+    linux-arm64: sha256:344a841f613f7b52f926564b3ff618f9d1b8a5f5d6e8cd4c68c5fdbdd613ec51
+    # https://dl.grafana.com/oss/release/grafana-7.5.4.windows-amd64.zip
+    windows-amd64: sha256:317cc4e831f0ca257b1793aaf54341d3b451e374898163301ecc39e3d0974fd7    
+  '7.5.5':
+    # https://dl.grafana.com/oss/release/grafana-7.5.5.linux-amd64.tar.gz
+    linux-amd64: sha256:ecf09e49301679f50829c756c446802a124e8981dec0d22dcbfaaa4df81c3fb7
+    # https://dl.grafana.com/oss/release/grafana-7.5.5.linux-arm64.tar.gz
+    linux-arm64: sha256:cd65cd84c38c7a43afeb0b1895e97a7b4f3203340be2da070a6dee75ead3fdfe
+    # https://dl.grafana.com/oss/release/grafana-7.5.5.windows-amd64.zip
+    windows-amd64: sha256:93c370236d5290d8c0029ef070fa89cd5341e97c2713997c0f410dac182f05e0
+  '7.5.6':
+    # https://dl.grafana.com/oss/release/grafana-7.5.6.linux-amd64.tar.gz
+    linux-amd64: sha256:dfa68869989c3607c106f8b8870209b273d36198dc47e7b229de84d048dddcd7
+    # https://dl.grafana.com/oss/release/grafana-7.5.6.linux-arm64.tar.gz
+    linux-arm64: sha256:0c25b63e64df694fd740a00abf016fa065d4f34ce2a6a1b85bb18ce4c0fe4476
+    # https://dl.grafana.com/oss/release/grafana-7.5.6.windows-amd64.zip
+    windows-amd64: sha256:5807057d4dc68e97dbc2244eab258782128f79a04ebe03ddfd5ae39f6699c792
+  '7.5.7':
+    # https://dl.grafana.com/oss/release/grafana-7.5.7.linux-amd64.tar.gz
+    linux-amd64: sha256:210eda02e52b35af9b4a1e6577a22db6e8ccf0080a51296ef07ee9c330e2d7ae
+    # https://dl.grafana.com/oss/release/grafana-7.5.7.linux-arm64.tar.gz
+    linux-arm64: sha256:131ccaebe8872277f61961b4414b26db7da205690d7ab170e9921638339f33ca
+    # https://dl.grafana.com/oss/release/grafana-7.5.7.windows-amd64.zip
+    windows-amd64: sha256:5a7fa3e6c820526b771fc8e1127ef4905a8e0be3dd252a7c556c559e7df55a3b    
