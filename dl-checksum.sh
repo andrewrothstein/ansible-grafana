@@ -30,4 +30,4 @@ dl_ver() {
     dl $ver windows amd64 zip
 }
 
-dl_ver ${1:-8.0.4}
+dl_ver ${1:-8.0.5}
