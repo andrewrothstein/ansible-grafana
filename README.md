@@ -1,6 +1,6 @@
 andrewrothstein.grafana
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-grafana.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-grafana)
+![Build Status](https://github.com/andrewrothstein/ansible-grafana/actions/workflows/build.yml/badge.svg)
 
 Installs [Grafana](https://grafana.com).
 
