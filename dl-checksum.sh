@@ -15,7 +15,7 @@ dl() {
 
     if [ ! -e $lfile ];
     then
-        wget -q -O $lfile $url
+        curl -sSLf -o $lfile $url
     fi
 
     printf "    # %s\n" $url
@@ -30,4 +30,4 @@ dl_ver() {
     dl $ver windows amd64 zip
 }
 
-dl_ver ${1:-8.3.2}
+dl_ver ${1:-8.3.6}

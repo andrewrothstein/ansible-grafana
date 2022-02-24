@@ -1,6 +1,6 @@
 ---
 # defaults file for grafana
-grafana_ver: 8.3.2
+grafana_ver: 8.3.6
 grafana_os: linux
 grafana_arch: amd64
 grafana_mirror: https://dl.grafana.com/oss/release
@@ -455,3 +455,31 @@ grafana_checksums:
     linux-arm64: sha256:a948c49e45e1cdfba96dd885a8dd4585746520d64497bc59aeb6eb2dc46b5e22
     # https://dl.grafana.com/oss/release/grafana-8.3.2.windows-amd64.zip
     windows-amd64: sha256:3d231c4fe7e0a65bf2d116f115f89dd51ad6f20fee092161256faa00aeec46e5
+  '8.3.3':
+    # https://dl.grafana.com/oss/release/grafana-8.3.3.linux-amd64.tar.gz
+    linux-amd64: sha256:89428c520e004bcb9faf7618dd4c81ff62496064cbf2ead3e1b9dbcf476c6f18
+    # https://dl.grafana.com/oss/release/grafana-8.3.3.linux-arm64.tar.gz
+    linux-arm64: sha256:6252917d7e63eb47e0955125b3b2c1c5d3e4d2e3bb84c269a8d86bd073a1dce7
+    # https://dl.grafana.com/oss/release/grafana-8.3.3.windows-amd64.zip
+    windows-amd64: sha256:edca7bf4f3f86ae743300ece72c1f17e3a9695b12041222b0e4d03717ca42303
+  '8.3.4':
+    # https://dl.grafana.com/oss/release/grafana-8.3.4.linux-amd64.tar.gz
+    linux-amd64: sha256:508f8da2e491c10566020c75f4e1e159ca032e3f4a0f4e71879effd602ef5a60
+    # https://dl.grafana.com/oss/release/grafana-8.3.4.linux-arm64.tar.gz
+    linux-arm64: sha256:0067da625741d4c0a04f9b66f79def4cbb6b22af5cd3b02afd12086af5af28f7
+    # https://dl.grafana.com/oss/release/grafana-8.3.4.windows-amd64.zip
+    windows-amd64: sha256:46be95632a673bdee187bac2dafea644959ccb7447829fc0dc5a961f7754093b
+  '8.3.5':
+    # https://dl.grafana.com/oss/release/grafana-8.3.5.linux-amd64.tar.gz
+    linux-amd64: sha256:d6093d30ad75d0ae5b5778483c01367524bcc201f5d9dc6f98dbb72aeff8d9ed
+    # https://dl.grafana.com/oss/release/grafana-8.3.5.linux-arm64.tar.gz
+    linux-arm64: sha256:46419883732751087684aea0efd7af6ad723de661ede7636d83c1cffe6f114ce
+    # https://dl.grafana.com/oss/release/grafana-8.3.5.windows-amd64.zip
+    windows-amd64: sha256:413edbdfd30b0ef29349fdfd314fffda6f2acdead4ccf8d550217722e2bbf462
+  '8.3.6':
+    # https://dl.grafana.com/oss/release/grafana-8.3.6.linux-amd64.tar.gz
+    linux-amd64: sha256:f2047de7ec42243ddedb95b16e6b5704cb12ec775b07ebf0adc67db00a52c459
+    # https://dl.grafana.com/oss/release/grafana-8.3.6.linux-arm64.tar.gz
+    linux-arm64: sha256:d7dfdc1d08499f19b84b51f878d5380ba293468cf753420ce25caf423fb7231a
+    # https://dl.grafana.com/oss/release/grafana-8.3.6.windows-amd64.zip
+    windows-amd64: sha256:d8b493bcb74b62bae8ad2d53d5b47aa35a10ba5a8ac7896f7724a19c53715b1d
