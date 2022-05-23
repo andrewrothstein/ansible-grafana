@@ -1,6 +1,6 @@
 ---
 # defaults file for grafana
-grafana_ver: 8.5.2
+grafana_ver: 8.5.3
 grafana_os: linux
 grafana_arch: amd64
 grafana_mirror: https://dl.grafana.com/oss/release
@@ -532,3 +532,10 @@ grafana_checksums:
     linux-arm64: sha256:26a8934d3bb3418a41cffb175d5dcd32849eaaa1ef68d219a3fc8bba73de9faa
     # https://dl.grafana.com/oss/release/grafana-8.5.2.windows-amd64.zip
     windows-amd64: sha256:5213a1fdbc55f42eb83e45c3b92b7a5aadec13d4bf8a77d8e05d238567acbf4f
+  '8.5.3':
+    # https://dl.grafana.com/oss/release/grafana-8.5.3.linux-amd64.tar.gz
+    linux-amd64: sha256:94c723358742b7da67323eb8ede32fa51519bca4e907e387f071afd8d8a62220
+    # https://dl.grafana.com/oss/release/grafana-8.5.3.linux-arm64.tar.gz
+    linux-arm64: sha256:4f1fc74bc8be9799f8461f187d322a168b067cc5a2c40117fbf130c38bc57b5e
+    # https://dl.grafana.com/oss/release/grafana-8.5.3.windows-amd64.zip
+    windows-amd64: sha256:cab5eef5916800a8a5a3dbf0761a96d26547df9ba8fcf53558cda92a1fc350fc
