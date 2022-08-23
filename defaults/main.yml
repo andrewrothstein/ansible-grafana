@@ -1,6 +1,6 @@
 ---
 # defaults file for grafana
-grafana_ver: 9.0.5
+grafana_ver: 9.1.0
 grafana_os: linux
 grafana_arch: amd64
 grafana_mirror: https://dl.grafana.com/oss/release
@@ -581,3 +581,10 @@ grafana_checksums:
     linux-arm64: sha256:9d4846300a6e23fbb5dae16b6f00d5b66e0d2bdaaedba6d8da5639a87921756f
     # https://dl.grafana.com/oss/release/grafana-9.0.5.windows-amd64.zip
     windows-amd64: sha256:865b7da0783b5c5877aa2272a4a9ae700fe7bc3745495d16fd741f960459c1eb
+  '9.1.0':
+    # https://dl.grafana.com/oss/release/grafana-9.1.0.linux-amd64.tar.gz
+    linux-amd64: sha256:4c51a0c1d651cfbedb4a299b846b03d3a5a2f51c1627574d9bd44f027219f601
+    # https://dl.grafana.com/oss/release/grafana-9.1.0.linux-arm64.tar.gz
+    linux-arm64: sha256:e1411640ea2cb41f615433315b6ffcc0ec4278c3ec52c3b4a6cd61602557af0d
+    # https://dl.grafana.com/oss/release/grafana-9.1.0.windows-amd64.zip
+    windows-amd64: sha256:bd9fd7ef423efd1590334d767c5b2986f81a90e5bbf5fcabb08ea0abc382f223
