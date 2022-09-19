@@ -1,5 +1,7 @@
 ---
 # vars file for grafana
+grafana_os: '{{ ansible_system | lower }}'
+grafana_arch: '{{ grafana_arch_map[ansible_architecture] }}'
 grafana_platform: '{{ grafana_os }}-{{ grafana_arch }}'
 grafana_name: grafana-{{ grafana_ver }}
 grafana_tgz: '{{ grafana_name }}.{{ grafana_platform }}.{{ grafana_archive_type | default("tar.gz") }}'
