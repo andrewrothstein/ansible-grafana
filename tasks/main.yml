@@ -12,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: check for installation at {{ grafana_install_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ grafana_install_dir }}'
   changed_when: false
@@ -21,14 +21,14 @@
 - when: not grafana_binary.stat.exists
   block:
     - name: downloading {{ grafana_tgz_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ grafana_tgz_url }}'
         dest: '{{ grafana_tmp_tgz }}'
         checksum: '{{ grafana_checksum }}'
     - name: unarchiving {{ grafana_tmp_tgz }} to {{ grafana_parent_install_dir }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
         src: '{{ grafana_tmp_tgz }}'
@@ -36,14 +36,14 @@
         creates: '{{ grafana_install_dir }}'
   always:
     - name: deleting {{ grafana_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ grafana_tmp_tgz }}'
         state: absent
 
 - name: linking {{ grafana_link_dir }} to {{ grafana_install_dir }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ grafana_install_dir }}'
@@ -51,7 +51,7 @@
     state: link
 
 - name: add to login shell path...
-  become: yes
+  become: true
   become_user: root
   with_items:
     - f: grafana.sh
