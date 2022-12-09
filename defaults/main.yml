@@ -1,6 +1,6 @@
 ---
 # defaults file for grafana
-grafana_ver: 9.2.5
+grafana_ver: 9.3.1
 grafana_arch_map:
   aarch64: arm64
   arm64: arm64
@@ -679,3 +679,12 @@ grafana_checksums:
     linux-arm64: sha256:115d78b9a7f3d1af007436649ff32617dc900eafda75d6b1f3439a4b7402062d
     # https://dl.grafana.com/oss/release/grafana-9.2.5.windows-amd64.zip
     windows-amd64: sha256:bd9a17617381c36a54b562a70791831d3120bb7ff7d27af3b22c821bf76c8cc0
+  '9.3.1':
+    # https://dl.grafana.com/oss/release/grafana-9.3.1.darwin-amd64.tar.gz
+    darwin-amd64: sha256:b8cf7576171ee384f948c9535160dc94fea10400ff54c7e964e031c0256132c4
+    # https://dl.grafana.com/oss/release/grafana-9.3.1.linux-amd64.tar.gz
+    linux-amd64: sha256:ecb21c48fc6fb9e418c5ea1fce6b6fbe59d26e87a8f93385eb1540fa0fa81ea1
+    # https://dl.grafana.com/oss/release/grafana-9.3.1.linux-arm64.tar.gz
+    linux-arm64: sha256:493528101f53094ba20b045e6f6c2f3f5bb2bf99d73321ba4c148e9719188615
+    # https://dl.grafana.com/oss/release/grafana-9.3.1.windows-amd64.zip
+    windows-amd64: sha256:b51ca8abc10be0c4d0bad7a8e2582ff69bd87323a8edc59e5d1d612800acc6b9
