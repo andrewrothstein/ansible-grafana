@@ -1,8 +1,9 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -11,52 +12,54 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for installation at {{ grafana_install_dir }}
+- name: Check for installation at {{ grafana_install_dir }}
   become: true
-  stat:
+  ansible.builtin.stat:
     path: '{{ grafana_install_dir }}'
   changed_when: false
   register: grafana_binary
 
-- when: not grafana_binary.stat.exists
+- name: Downloading and installing grafana
+  when: not grafana_binary.stat.exists
   block:
-    - name: downloading {{ grafana_tgz_url }}
+    - name: Downloading {{ grafana_tgz_url }}
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ grafana_tgz_url }}'
         dest: '{{ grafana_tmp_tgz }}'
         checksum: '{{ grafana_checksum }}'
-    - name: unarchiving {{ grafana_tmp_tgz }} to {{ grafana_parent_install_dir }}
+        mode: '644'
+    - name: Unarchiving {{ grafana_tmp_tgz }} to {{ grafana_parent_install_dir }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         src: '{{ grafana_tmp_tgz }}'
         dest: '{{ grafana_parent_install_dir }}'
         creates: '{{ grafana_install_dir }}'
   always:
-    - name: deleting {{ grafana_tmp_tgz }}
+    - name: Rm -f {{ grafana_tmp_tgz }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ grafana_tmp_tgz }}'
         state: absent
 
-- name: linking {{ grafana_link_dir }} to {{ grafana_install_dir }}
+- name: Linking {{ grafana_link_dir }} to {{ grafana_install_dir }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ grafana_install_dir }}'
     dest: '{{ grafana_link_dir }}'
     state: link
 
-- name: add to login shell path...
+- name: Add to login shell path...
   become: true
   become_user: root
   with_items:
     - f: grafana.sh
       d: /etc/profile.d
-  template:
+  ansible.builtin.template:
     src: '{{ item.f }}.j2'
     dest: '{{ item.d }}/{{ item.f }}'
     mode: '{{ item.m|default("0644") }}'

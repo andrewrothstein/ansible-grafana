@@ -3,11 +3,10 @@
 grafana_os: '{{ ansible_system | lower }}'
 grafana_arch: '{{ grafana_arch_map[ansible_architecture] }}'
 grafana_platform: '{{ grafana_os }}-{{ grafana_arch }}'
-grafana_name: grafana-{{ grafana_ver }}
-grafana_tgz: '{{ grafana_name }}.{{ grafana_platform }}.{{ grafana_archive_type | default("tar.gz") }}'
+grafana_tgz: 'grafana-{{ grafana_ver }}.{{ grafana_platform }}.{{ grafana_archive_type | default("tar.gz") }}'
 grafana_tmp_tgz: /tmp/{{ grafana_tgz }}
 grafana_tgz_url: '{{ grafana_mirror }}/{{ grafana_tgz }}'
 grafana_checksum: '{{ grafana_checksums[grafana_ver][grafana_platform] }}'
 
-grafana_install_dir: '{{ grafana_parent_install_dir }}/{{ grafana_name }}'
+grafana_install_dir: '{{ grafana_parent_install_dir }}/grafana-{% if grafana_dashv %}v{% endif %}{{ grafana_ver }}'
 grafana_link_dir: '{{ grafana_parent_install_dir }}/grafana'

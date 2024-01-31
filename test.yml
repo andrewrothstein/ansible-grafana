@@ -1,10 +1,15 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.grafana
+  hosts: all
+  vars:
+    grafana_ver: 10.3.1
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: /usr/local/grafana/bin/grafana server -v
+    - name: Executing 'grafana server -v'
+      ansible.builtin.command: /usr/local/grafana/bin/grafana server -v
+      changed_when: false
       register: grafana_test_output
-    - name: grafana server -v
-      debug:
+    - name: Output of 'grafana server -v'
+      ansible.builtin.debug:
         msg: '{{ grafana_test_output.stdout }}'
