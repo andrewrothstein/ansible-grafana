@@ -1,8 +1,6 @@
 ---
 - name: Testing andrewrothstein.grafana
   hosts: all
-  vars:
-    grafana_ver: 10.3.1
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
